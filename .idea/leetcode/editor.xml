@@ -187,6 +187,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P120_Triangle.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P120_Triangle.java" />
+              <option name="questionId" value="120" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P121_BestTimeToBuyAndSellStock.java">
           <value>
             <LeetcodeEditor>
@@ -216,6 +224,30 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P153_FindMinimumInRotatedSortedArray.java" />
               <option name="questionId" value="153" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P1889_MinimumSpaceWastedFromPackaging.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P1889_MinimumSpaceWastedFromPackaging.java" />
+              <option name="questionId" value="2018" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P198_HouseRobber.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P198_HouseRobber.java" />
+              <option name="questionId" value="198" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P322_CoinChange.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P322_CoinChange.java" />
+              <option name="questionId" value="322" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -259,6 +291,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P53_MaximumSubarray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P53_MaximumSubarray.java" />
+              <option name="questionId" value="53" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P62_UniquePaths.java">
           <value>
             <LeetcodeEditor>
@@ -272,6 +312,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P63_UniquePathsIi.java" />
               <option name="questionId" value="63" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P691_StickersToSpellWord.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P691_StickersToSpellWord.java" />
+              <option name="questionId" value="691" />
             </LeetcodeEditor>
           </value>
         </entry>
