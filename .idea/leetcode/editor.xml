@@ -243,11 +243,35 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P208_ImplementTriePrefixTree.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P208_ImplementTriePrefixTree.java" />
+              <option name="questionId" value="208" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P212_WordSearchIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P212_WordSearchIi.java" />
+              <option name="questionId" value="212" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P322_CoinChange.java">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P322_CoinChange.java" />
               <option name="questionId" value="322" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P32_LongestValidParentheses.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P32_LongestValidParentheses.java" />
+              <option name="questionId" value="32" />
             </LeetcodeEditor>
           </value>
         </entry>
