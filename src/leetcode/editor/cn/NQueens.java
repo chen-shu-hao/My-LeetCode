@@ -63,14 +63,17 @@ public class NQueens{
             dfs(0,n,allResults);
             return allResults;
         }
+        //回溯
         private void dfs(int level,int n,List<List<String>> allResults) {
             //terminal 如果到了n说明之前的所有都找到了
             if (level == n) {
-                //说明所有行中都找到了皇后
+                //说明所有行中都找到了皇后,columns是每一行上的坐标
                 allResults.add(draw(columns));
+                return;
             }
-
-            for (int i=-0;i<n;i++) {
+            //n叉树的前序遍历
+            //n是cols限制 每次从第一行开始找,在判断8象限是否有重复的值level就是row,i是col pie:row+col na:row-col
+            for (int i=0;i<n;i++) {
                 if (columns.contains(i)||pie.contains(level+i)||na.contains(level-i)) continue;
                 columns.add(i);
                 pie.add(level+i);
