@@ -363,6 +363,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P493_ReversePairs.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P493_ReversePairs.java" />
+              <option name="questionId" value="493" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P515FindLargestValueInEachTreeRow.java">
           <value>
             <LeetcodeEditor>
@@ -387,6 +395,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P56_MergeIntervals.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P56_MergeIntervals.java" />
+              <option name="questionId" value="56" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P58_LengthOfLastWord.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P58_LengthOfLastWord.java" />
+              <option name="questionId" value="58" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P62_UniquePaths.java">
           <value>
             <LeetcodeEditor>
@@ -408,6 +432,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P691_StickersToSpellWord.java" />
               <option name="questionId" value="691" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P709_ToLowerCase.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P709_ToLowerCase.java" />
+              <option name="questionId" value="742" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P771_JewelsAndStones.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P771_JewelsAndStones.java" />
+              <option name="questionId" value="782" />
             </LeetcodeEditor>
           </value>
         </entry>
