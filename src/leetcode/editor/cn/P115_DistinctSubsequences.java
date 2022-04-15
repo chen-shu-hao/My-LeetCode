@@ -70,7 +70,7 @@ public class P115_DistinctSubsequences {
                 for (int j = 1; j <= n; j++) {
                     if (s.charAt(i-1) == t.charAt(j-1)) {
                         //如果当前字符串相等
-                        // 1.可以要当前s字符串,也可以不要当前字符串
+                        // 1.由2种情况组成 可以要当前s字符串,也可以不要当前字符串
                         dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
                     } else {
                         //当前字符串一定不选

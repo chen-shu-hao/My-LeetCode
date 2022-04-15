@@ -48,17 +48,73 @@ package leetcode.editor.cn;
 // 👍 2901 👎 0
 
 //java:正则表达式匹配
+
+import java.util.HashMap;
 import java.util.List;
-public class P10_RegularExpressionMatching{
-    public static void main(String[] args){
+import java.util.Map;
+
+public class P10_RegularExpressionMatching {
+    public static void main(String[] args) {
         Solution solution = new P10_RegularExpressionMatching().new Solution();
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public boolean isMatch(String s, String p) {
-        return false;
+    class Solution {
+        private Map<String,Boolean> memo;//有没有用过 用map当缓存
+        int slen;
+        int plen;
+
+        public boolean isMatch(String s, String p) {
+            slen = s.length();
+            plen = p.length();
+            memo = new HashMap<>();
+            return dfs(s, 0, p, 0);
+        }
+
+        private boolean dfs(String s, int i, String p, int j) {
+            //如果字符规律串已经到顶了,说明已经匹配完成了,判断s是否也已经到了尾部
+            if (j == plen) {
+                return i == slen;
+            }
+            //如果s已经到了末尾,那么此时只有当p后面都是类似a*这种才行（能形成空字符串）
+            if (i == slen) {
+                if ((plen - j) % 2 == 1) {//此处是长度-1，不是索引-1
+                    return false;
+                }
+                for (; j + 1 < plen; j += 2) {
+                    if (p.charAt(j + 1) != '*') {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            String key = i + "," + j;
+            if (memo.containsKey(key)) return memo.get(key);
+            boolean res;
+            //1.判断当前字符串是不是相等
+            if (s.charAt(i) == p.charAt(j) || p.charAt(j) == '.') {
+                //判断接下来的一个字符包不包含*
+                if (j < plen-1 && p.charAt(j+1) == '*') {
+                    //包含*,j可以用0次或多次
+                    //0次说明i也没被消耗
+                    res = dfs(s,i,p,j+2) || dfs(s,i+1,p,j);
+                } else {
+                    //不包含*,那2个必须匹配
+                    res = dfs(s, i + 1, p, j + 1);
+                }
+            } else {
+                if (j < plen-1 && p.charAt(j+1) == '*') {
+                    //包含*,要和之前的形成空串,p用2个字符和后面的匹配
+                    res = dfs(s, i, p, j + 2);
+                } else {
+                    //不包含*,当前字符串不匹配,不能形成空串 肯定false
+                    return false;
+                }
+            }
+            memo.put(key,res);
+            return res;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

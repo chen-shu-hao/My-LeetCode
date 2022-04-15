@@ -43,7 +43,42 @@ public class P121_BestTimeToBuyAndSellStock{
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public int maxProfit(int[] prices) {
+
+       public int maxProfit(int[] prices) {
+           int n = prices.length;
+           if (n < 2) return 0;
+        /*dp数组 dp[i][k][j] i代表是第几天,k代表能交易的最大次数 j代表 0是未持有 1是持有
+        i天能获得的最大利润
+         子问题
+            1.i天不持有 dp[i][k][0] = Math.max(dp[i-1][k][0],dp[i-1][k][1] + prices[i])
+            2.i天持有 dp[i][k][1] = Math.max(dp[i-1][k][1],dp[i-1][k-1][0] - price[i])
+         初始状态 basecase
+            dp[-1][...][0] 代表还没开始也还没持有 利润 0
+            dp[-1][...][1] 代表还没开始但持有了 利润 -inf 方便取最大值
+            dp[...][0][0]  代表还没开始交易也没持有 0
+            dp[...][0][1]  代表还没开始交易但持有了 -inf 方便取最大值
+         */
+           //因为k=1
+         /* dp[i][k][0] = Math.max(dp[i-1][1][0],dp[i-1][1][1] + prices[i])
+            dp[i][k][1] = Math.max(dp[i-1][1][1],dp[i-1][0][0] - price[i])
+                        = Math.max(dp[i-1][1][1], - price[i])
+           dp[i][0] = Math.max(dp[i-1][0],dp[i-1][1] + prices[i])
+            dp[i][1] = Math.max(dp[i-1][1],dp[i-1][0][0] - price[i])
+                        = Math.max(dp[i-1][1], - price[i])
+                        */
+           int[][] dp = new int[n][2];
+           for (int i = 0; i < n; i++) {
+               if (i - 1 == -1) {
+                   dp[i][0] = 0;
+                   dp[i][1] = -prices[i];
+                   continue;
+               }
+               dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
+               dp[i][1] = Math.max(dp[i-1][1], - prices[i]);
+           }
+           return dp[n - 1][0];
+       }
+    /*public int maxProfit(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -55,21 +90,7 @@ class Solution {
             }
         }
         return maxProfit;
-    }
-
-
-       /* public int maxProfit(int[] prices) {
-            if (prices.length == 0) {
-                return 0;
-            }
-            int maxProfit = 0;
-            for (int i = 0; i < prices.length-1; i++) {
-                for (int j = i+1; j < prices.length; j++) {
-                    maxProfit = Math.max(maxProfit, prices[j] - prices[i]);
-                }
-            }
-            return maxProfit;
-        }*/
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)
 

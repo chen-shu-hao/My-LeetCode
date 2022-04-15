@@ -59,17 +59,57 @@ package leetcode.editor.cn;
 // 👍 857 👎 0
 
 //java:通配符匹配
+
+import java.util.HashMap;
 import java.util.List;
-public class P44_WildcardMatching{
-    public static void main(String[] args){
+import java.util.Map;
+
+public class P44_WildcardMatching {
+    public static void main(String[] args) {
         Solution solution = new P44_WildcardMatching().new Solution();
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public boolean isMatch(String s, String p) {
-        return false;
+    class Solution {
+        private Map<String, Boolean> memo;
+        int slen;
+        int plen;
+        public boolean isMatch(String s, String p) {
+            if (s == null || p == null) return false;
+            slen = s.length();plen = p.length();
+            if (slen == 0 && slen == plen) return true;
+            memo = new HashMap<>();
+            return dp(s,0,p,0);//当前s[i..]和p[i..]能否完全匹配
+        }
+
+        private boolean dp(String s, int i, String p, int j) {
+            //terminal
+            if (j == plen) {
+                return i == slen;
+            }
+            if (i == slen) {
+                //j和j后面必须全部是*。
+                for (;j<plen;j++) {
+                    if (p.charAt(j) != '*') return false;
+                }
+                return true;
+            }
+            String key = i + "," + j;
+            if (memo.containsKey(key)) return memo.get(key);
+            boolean res = false;
+            if (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?') {
+                res = dp(s, i + 1, p, j + 1);
+            } else if (p.charAt(j) == '*'){
+                //使用当前* 0次或多次 或者不用
+                res = dp(s, i , p, j + 1) || dp(s, i + 1, p, j );;
+            } else {
+                //未匹配上
+                return false;
+            }
+            memo.put(key, res);
+            return res;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

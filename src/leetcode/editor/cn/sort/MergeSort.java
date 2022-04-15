@@ -31,7 +31,6 @@ public class MergeSort {
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
         merge(arr, left, mid, right);
-
     }
 
     private static void merge(int[] arr, int left, int mid, int right) {
