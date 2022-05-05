@@ -22,7 +22,7 @@ public class MergeSort {
         mergeSort(ints, 0, ints.length-1);
         System.out.println(Arrays.toString(ints));
     }
-
+    //感觉递归问题最终都可以转化为树的一个选择问题，想明白是在前还是后，进行一个单层逻辑的计算以及进入的选择，就可以直接套模板解决问题
     private static void mergeSort(int[] arr, int left, int right) {
         if (left >= right) {
             return;
