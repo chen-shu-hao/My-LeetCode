@@ -17,7 +17,7 @@ package leetcode.editor.cn;
 //输出：["()"]
 // 
 //
-// 
+//
 //
 // 提示： 
 //

@@ -28,7 +28,7 @@ package leetcode.editor.cn;
 //输出：0
 // 
 //
-// 
+//
 //
 // 提示： 
 //
@@ -79,7 +79,7 @@ class Solution {
         }
         return max;
     }
-}
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
