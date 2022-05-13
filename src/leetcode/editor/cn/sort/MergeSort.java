@@ -41,8 +41,6 @@ public class MergeSort {
         }
         while (i <= mid) temp[k++] = arr[i++];
         while (j <= right) temp[k++] = arr[j++];
-        for (int p = 0; p < temp.length; p++) {
-            arr[left + p] = temp[p];
-        }
+        System.arraycopy(temp, 0, arr, left + 0, temp.length);
     }
 }

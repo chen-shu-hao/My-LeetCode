@@ -26,7 +26,7 @@ public class BubbleSort {
         int length = arr.length;
         for (int i = 0; i < length - 1; i++) {//代表遍历i次
             boolean flag = false;//加入标志 加快排序速度
-            for (int j = 0; j < length - 1 - i; j++) {//代表遍历的位置
+            for (int j = 0; j < length - 1 - i; j++) {//代表遍历的结束位置
                 if (arr[j] > arr[j+1]) {
                     temp = arr[j + 1];
                     arr[j + 1] = arr[j];
@@ -34,7 +34,7 @@ public class BubbleSort {
                     flag = true;
                 }
             }
-            if (flag) {
+            if (!flag) {
                 break;
             }
         }
